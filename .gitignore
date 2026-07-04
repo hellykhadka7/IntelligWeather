@@ -1,0 +1,81 @@
+# ==========================
+# Weather Intelligence Platform
+# ==========================
+
+# --------------------------
+# Node.js Dependencies
+# --------------------------
+node_modules/
+
+# --------------------------
+# Environment Variables
+# --------------------------
+.env
+.env.*
+!.env.example
+
+# --------------------------
+# Python
+# --------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# ML Models / Cache
+*.pkl
+
+# Pytest
+.pytest_cache/
+
+# --------------------------
+# Build Outputs
+# --------------------------
+dist/
+build/
+.next/
+out/
+
+# Coverage Reports
+coverage/
+
+# --------------------------
+# Logs
+# --------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --------------------------
+# OS Files
+# --------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --------------------------
+# Editor / IDE
+# --------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --------------------------
+# Vercel
+# --------------------------
+.vercel/
+
+# --------------------------
+# Render / Process
+# --------------------------
+*.pid
