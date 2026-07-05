@@ -11,6 +11,56 @@ A **production-quality**, full-stack weather monitoring application featuring re
 
 ---
 
+## 📸 Application Preview
+
+<p align="center">
+  <img src="assets/dashboard.png" width="95%">
+</p>
+
+---
+
+## 📷 Screenshots
+
+<table>
+<tr>
+<td align="center">
+
+### 🌤 Dashboard
+
+<img src="assets/dashboard.png" width="430"/>
+
+</td>
+
+<td align="center">
+
+### 📊 Weather Analytics
+
+<img src="assets/forecast.png" width="430"/>
+
+</td>
+</tr>
+
+<tr>
+<td align="center">
+
+### 📈 Temperature Trends
+
+<img src="assets/charts.png" width="430"/>
+
+</td>
+
+<td align="center">
+
+### 🤖 ML Prediction
+
+<img src="assets/ml-predict.png" width="430"/>
+
+</td>
+</tr>
+</table>
+
+---
+
 ## ✨ Features
 
 | Feature | Details |
@@ -30,10 +80,17 @@ A **production-quality**, full-stack weather monitoring application featuring re
 ## 🏗 Architecture
 
 ```
-React (Vite) Frontend → Express.js Backend → MongoDB (Atlas)
-                                           ↓
-                                  FastAPI ML Service
-                                  (scikit-learn LinearRegression)
+                     OpenWeatherMap API
+                            │
+                            ▼
+React (Vite) ──► Express.js API ──► MongoDB Atlas
+      │                │
+      │                ▼
+      │          FastAPI ML Service
+      │          (scikit-learn)
+      │
+      ▼
+   Interactive Dashboard
 ```
 
 ```
@@ -59,8 +116,8 @@ weather-intelligence/
 ### 1. Clone & Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/weather-intelligence.git
-cd weather-intelligence
+git clone https://github.com/hellykhadka7/IntelliWeather.git
+cd IntelliWeather
 ```
 
 ---
@@ -89,9 +146,9 @@ cp .env.example .env
 Edit `server/.env`:
 ```env
 PORT=5000
-MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/weather-intelligence
-OPENWEATHER_API_KEY=your_key_here
-WAQI_API_TOKEN=your_token_here
+MONGODB_URI=<your_mongodb_uri>
+OPENWEATHER_API_KEY=<your_api_key>
+WAQI_API_TOKEN=<your_token>
 ML_SERVICE_URL=http://localhost:8000
 CORS_ORIGIN=http://localhost:5173
 ```
@@ -200,16 +257,6 @@ In Vercel dashboard:
 
 ---
 
-## 📋 Resume Description
-
-> **Weather Intelligence Platform** | React · Node.js · MongoDB · FastAPI · scikit-learn
->
-> - Built a full-stack weather monitoring platform with real-time AQI tracking and ML-powered temperature predictions, integrating OpenWeatherMap and WAQI external APIs
-> - Designed a 3-tier microservice architecture (React/Vite frontend → Express REST API → FastAPI ML service) with MongoDB for search history and weather data persistence
-> - Implemented LinearRegression temperature prediction pipeline in Python/scikit-learn served via FastAPI, with confidence scoring, R² metrics, and graceful data-insufficiency handling
-> - Deployed frontend to Vercel and backend services to Render; applied rate limiting, CORS, graceful fallbacks, and input validation throughout
-
----
 
 ## 📝 License
 
